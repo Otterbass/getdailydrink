@@ -8,4 +8,4 @@ User = get_user_model()
 class RegistrationForm(UserCreationForm):
     class Meta:
         model = CustomerUser
-        fields = ['username', 'email' , 'password1' , 'password2', 'gender', 'location', 'exercice', 'daily_goal']
+        fields = ['username', 'email' , 'password1' , 'password2', 'gender', 'location', 'exercises_type', 'daily_goal']

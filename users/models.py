@@ -9,10 +9,15 @@ class CustomerUser(AbstractUser):
         ('F', 'Female'),
         ('M', 'Male')
     ]
+    EXERCICE_CHOICES = [
+        ('cardio' , 'Cardio'),
+        ('weights', 'Weights'),
+        ('none', 'None')
+    ]
     gender = models.CharField(max_length=100, choices=GENDER_CHOICES)
     location = models.CharField(max_length=250)
-    exercice = models.CharField(max_length=250)
-    daily_goal = models.FloatField(default=2.0)
+    exercises_type = models.CharField(max_length=50, choices=EXERCICE_CHOICES)
+    daily_goal = models.FloatField(default=2.5)
 
     def __str__(self):
         return self.username
